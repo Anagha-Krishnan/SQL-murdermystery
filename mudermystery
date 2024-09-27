@@ -1,1 +1,60 @@
+-1-
+SELECT *
+  FROM crime_scene_report where type='murder' and city='SQL City' and date=20180115
+
+-2-
+SELECT *
+  FROM person where address_street_name='Northwestern Dr' or'Franklin Ave'
+
+-3-
+SELECT *
+  FROM person where address_street_name='Northwestern Dr'ORDER BY address_number DESC
+limit 1
+
+-4-
+SELECT *
+  FROM person where name like '%Annabel%' and address_street_name='Franklin Ave'
+
+
+-5-
+SELECT *
+  FROM interview where person_id=14887
+
+
+-6-
+SELECT * 
+FROM get_fit_now_member 
+where person_id=12711
+
+-7-
+SELECT * 
+FROM get_fit_now_check_in 
+where check_in_date=20180109 and membership_id like'%48Z%'
+
+
+-8-
+SELECT * 
+FROM get_fit_now_member 
+WHERE id = '48Z7A' OR id = '48Z55';
+
+
+-9-
+SELECT * 
+FROM drivers_license 
+where plate_number like '%H42W%'
+
+
+-10-
+SELECT * 
+FROM person 
+where license_id=423327	 or license_id=664760	
+
+
+
+-final-
+SELECT * 
+FROM person 
+WHERE (license_id=423327 OR license_id=664760) AND (id=67318 OR id=28819);
+
+
 
